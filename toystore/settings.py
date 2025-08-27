@@ -11,6 +11,9 @@ SECRET_KEY = os.getenv("SECRET_KEY", "your-default-secret-key")  # Set in Railwa
 DEBUG = os.getenv("DEBUG", "False") == "True"
 # Allowed Hosts (Railway URL + localhost)
 ALLOWED_HOSTS = ["localhost", "127.0.0.1", os.getenv("RAILWAY_URL", ".railway.app")]
+CSRF_TRUSTED_ORIGINS = [
+    "https://pushtoys-production.up.railway.app",
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
